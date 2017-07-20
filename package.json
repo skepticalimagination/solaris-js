@@ -1,0 +1,55 @@
+{
+  "name": "solaris-js",
+  "version": "0.0.0",
+  "description": "A reusable component for interactive visualization of the Solar System",
+  "private": true,
+  "main": "dist/solaris.js",
+  "module": "dist/solaris.mjs",
+  "style": "dist/solaris.css",
+  "scripts": {
+    "rollup": "rollup -c",
+    "rollup-watch": "rollup -cw -m inline",
+    "stylus": "stylus src/index.styl -c --include-css -o dist/solaris.css",
+    "stylus-watch": "stylus src/index.styl -w --sourcemap-inline --include-css -o dist/solaris.css",
+    "uglify": "uglifyjs dist/solaris.js -cm -o dist/solaris.min.js",
+    "copy-assets": "rm -r dist && cp -r assets dist",
+    "serve": "live-server example",
+    "dev": "run-p copy-assets stylus-watch rollup-watch serve",
+    "dist": "run-s copy-assets stylus rollup uglify"
+  },
+  "engines": {
+    "node": ">= 4.2.0"
+  },
+  "dependencies": {
+    "fastclick": "^1.0.6",
+    "three": "0.84.0"
+  },
+  "devDependencies": {
+    "coffee-script": "^1.12.6",
+    "deasync": "^0.1.10",
+    "live-server": "^1.2.0",
+    "mocha": "^3.2.0",
+    "npm-run-all": "^4.0.2",
+    "rollup": "^0.43.0",
+    "rollup-plugin-coffee-script": "^1.1.0",
+    "rollup-plugin-commonjs": "^8.0.2",
+    "rollup-plugin-filesize": "^1.4.2",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-sizes": "^0.4.0",
+    "rollup-watch": "^4.0.0",
+    "solaris-model": "^0.1.0",
+    "stylus": "^0.53.0",
+    "uglify-js": "^3.0.20"
+  },
+  "keywords": [
+    "solar",
+    "planets",
+    "astronomy",
+    "space",
+    "orbital",
+    "model",
+    "engine",
+    "simulator"
+  ],
+  "license": "MIT"
+}

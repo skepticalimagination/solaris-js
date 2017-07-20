@@ -1,0 +1,37 @@
+inert()
+  cursor default
+  user-select none
+  pointer-events none
+
+.label
+  // inert()
+  // TODO: reinstate inert() when using raycasting to handle clicking on bodies
+  cursor pointer
+  user-select none
+  pointer-events auto
+  position absolute
+  left 0
+  top 0
+  transform-origin top left
+  transform translate3d(0, 0, 0)
+  color #fff
+  background #444
+  font-size 11px
+  white-space nowrap
+  padding 3px
+  height 22px
+  margin-top -11px
+  margin-left 12px
+  border 1px solid #666
+  z-index 50
+  border-radius 3px
+
+  .spot
+    inert()
+    width 10px
+    height 10px
+    position absolute
+    top 5px
+    left -18px
+    border 1px solid #fff
+    border-radius 50%
