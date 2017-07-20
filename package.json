@@ -2,10 +2,14 @@
   "name": "solaris-js",
   "version": "0.0.0",
   "description": "A reusable component for interactive visualization of the Solar System",
-  "private": true,
   "main": "dist/solaris.js",
+  "repository": "https://github.com/skepticalimagination/solaris-js.git",
   "module": "dist/solaris.mjs",
   "style": "dist/solaris.css",
+  "files": [
+    "dist",
+    "src"
+  ],
   "scripts": {
     "rollup": "rollup -c",
     "rollup-watch": "rollup -cw -m inline",
@@ -51,5 +55,7 @@
     "engine",
     "simulator"
   ],
+  "author": "wintermutt",
+  "bugs": "https://github.com/skepticalimagination/solaris-js/issues",
   "license": "MIT"
 }
