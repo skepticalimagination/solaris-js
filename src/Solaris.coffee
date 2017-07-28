@@ -27,7 +27,7 @@ class $Solaris
 
       @loader = new Loader(@el, @root)
 
-      fastclick(document.body)
+      fastclick(options?.fastClickElement ? @el)
 
       @scene = new Scene
       @scene.add new AmbientLight(0x222222)

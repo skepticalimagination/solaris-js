@@ -157,6 +157,17 @@ Color of the emitted light, only used for orbiters of type `star`.
 
 Color of the line showing the orbit's path.
 
+### Other options
+#### `fastclickElement`
+
+The [FastClick](https://github.com/ftlabs/fastclick) library is used to eliminate tap delay on touch-based devices, and by default it is restricted to the element you supplied Solaris with.
+
+You can use this option to attach FastClick to a different element, for example if you wish it to apply to the whole document:
+
+```javascript
+let solaris = new Solaris('elementId', {fastClickElement: document.body})
+```
+
 ## To-do list
 
 - Camera positioning and direction
