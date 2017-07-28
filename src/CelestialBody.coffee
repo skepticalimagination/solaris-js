@@ -42,8 +42,8 @@ class $CelestialBody
     if @model.elements
       @group.position.fromArray(@solaris.scale.convert(@model.position))
 
-    if @lastTime isnt @model.time
-      @lastTime = @model.time
+    if @lastTime isnt @solaris.model.time
+      @lastTime = @solaris.model.time
       @orbit.update(@model.getOrbitPath()) if @orbit
 
     labelPosition = @getScreenPosition()
