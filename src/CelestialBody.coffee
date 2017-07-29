@@ -12,7 +12,7 @@ import Orbit from './Orbit'
 degreesToRadians = (v) -> v * (Math.PI / 180)
 
 class $CelestialBody
-  constructor: (@model, @solaris, @parent) ->
+  constructor: (@model, @solaris, @parent, @canvas) ->
     @styles = @solaris.styles.compute(@model.key, @model.type)
 
     @container = if not @parent then @solaris.scene
@@ -99,10 +99,10 @@ class $CelestialBody
     pos = @getAbsolutePosition()
     pos.project(@solaris.camera)
 
-    w = window.innerWidth
+    w = @canvas.offsetWidth
     hw = w / 2
 
-    h = window.innerHeight
+    h = @canvas.offsetHeight
     hh = h / 2
 
     pos.x = (pos.x * hw) + hw

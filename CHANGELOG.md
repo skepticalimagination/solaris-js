@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Fixed
 - Updating orbit paths correctly when time changes.
+- Positioning labels correctly (relative to WebGL canvas instead of window).
 
 ## 0.1.0 - 2017-07-20
 ### Added

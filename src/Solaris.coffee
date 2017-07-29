@@ -70,7 +70,7 @@ class $Solaris
 
   initBodies: (bodies, parent) ->
     for k, model of bodies
-      body = new CelestialBody(model, this, parent)
+      body = new CelestialBody(model, this, parent, @renderer.domElement)
       @bodies[k] = body
       @initBodies(model.satellites, body) if model.satellites
 
