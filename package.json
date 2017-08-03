@@ -17,7 +17,7 @@
     "stylus-watch": "stylus src/index.styl -w --sourcemap-inline --include-css -o dist/solaris.css",
     "uglify": "uglifyjs dist/solaris.js -cm -o dist/solaris.min.js",
     "copy-assets": "rm -r dist && cp -r assets dist",
-    "serve": "live-server example",
+    "serve": "live-server example --no-browser",
     "dev": "run-p copy-assets stylus-watch rollup-watch serve",
     "dist": "run-s copy-assets stylus rollup uglify"
   },
