@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - `fastClickElement` option: allows applying FastClick to document.body or another element.
 
 ### Changed
-- By default, applying FastClick only to the element you supply Solaris with.
+- By default, applying FastClick only to the container element supplied to the constructor.
 
 ### Fixed
 - Updating orbit paths correctly when time changes.
