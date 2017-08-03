@@ -84,6 +84,8 @@ You can also pass it an element reference:
 let solaris = new Solaris(document.querySelector('.solaris'))
 ```
 
+### `#setTime`
+
 By default, the date/time used for the calculation of positions will be the system's local.
 
 To set a specific date/time, you can either give it a date string:
@@ -97,6 +99,16 @@ Or a javascript `Date` object:
 ```javascript
 solaris.setTime(new Date('1969-07-20T20:17:43Z'))
 ```
+
+### `#center`
+
+Sets the center of camera and controls.
+
+```javascript
+solaris.center('mars')
+```
+
+### Styles
 
 You can customize the appearance of celestial bodies and orbits by using the `styles` param:
 
@@ -135,13 +147,13 @@ Object.keys(solaris.model.bodies)
 // => ["sun", "mercury", "venus", "earth", "moon", "iss", "mars", "phobos", "deimos", "ceres", "jupiter", "io", "europa", "ganymede", "callisto", "saturn", "mimas", "enceladus", "tethys", "dione", "rhea", "titan", "hyperion", "iapetus", "phoebe", "uranus", "titania", "neptune", "triton", "pluto", "eris", "sedna"]
 ```
 
-### Available styles
+#### Styleable properties
 
-#### `color`
+##### `color`
 
 The sphere's surface color, as a number. Ex.: `0xFFFFFF`.
 
-#### `texture`
+##### `texture`
 
 Instead of a color, use a texture for the sphere's surface.
 
@@ -149,15 +161,16 @@ If set to `true`, the corresponding image will be expected at `{root}/img/{bodyK
 
 If given a string, it will be interpreted as the full relative path to the image.
 
-#### `light`
+##### `light`
 
 Color of the emitted light, only used for orbiters of type `star`.
 
-#### `orbit`
+##### `orbit`
 
 Color of the line showing the orbit's path.
 
 ### Other options
+
 #### `fastclickElement`
 
 The [FastClick](https://github.com/ftlabs/fastclick) library is used to eliminate tap delay on touch-based devices, and by default it is restricted to the element you supplied Solaris with.

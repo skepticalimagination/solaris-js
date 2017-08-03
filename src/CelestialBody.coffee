@@ -34,8 +34,7 @@ class $CelestialBody
       @container.add(@orbit.line)
 
     @label = new Label @model, @styles.orbit, @solaris.el
-    @label.onClick =>
-      @solaris.controls.target.copy(@getAbsolutePosition())
+    @label.onClick => @solaris.center(this)
 
   # @public
   update: ->
@@ -116,4 +115,4 @@ class $CelestialBody
       null
 
 export default class CelestialBody extends publicize $CelestialBody,
-  methods: ['update']
+  methods: ['update', 'getAbsolutePosition']

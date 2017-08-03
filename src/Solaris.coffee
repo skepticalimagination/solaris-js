@@ -11,6 +11,7 @@ import Loader from './loader/Loader'
 import CelestialBody from './CelestialBody'
 import Background from './Background'
 import Controls from './Controls'
+wait = (ms, cb) -> setTimeout(cb, ms)
 
 class $Solaris
   constructor: (element, options) ->
@@ -50,6 +51,12 @@ class $Solaris
   # @public
   setTime: (time) ->
     @model.setTime(time)
+    wait 50, => @center(@target) if @target
+
+  # @public
+  center: (@target) ->
+    @target = @bodies[@target] if typeof @target is 'string'
+    @controls.target.copy(@target.getAbsolutePosition())
 
   createRenderer: ->
     @renderer = new WebGLRenderer(antialias: yes, alpha: yes)
@@ -92,4 +99,4 @@ class $Solaris
 
 export default class Solaris extends publicize $Solaris,
   properties: ['model']
-  methods: ['setTime']
+  methods: ['setTime', 'center']
