@@ -55,7 +55,7 @@ app.use('/solaris', express.static(__dirname + '/node_modules/solaris/dist'))
 
 ### Manual installation
 
-If you prefer to install it the old-fashioned way, download the [tarball](https://registry.npmjs.org/solaris-js/-/solaris-js-0.1.0.tgz) and copy the `dist` folder to your public root, renaming it `solaris`.
+If you prefer to install it the old-fashioned way, download the [tarball](https://registry.npmjs.org/solaris-js/-/solaris-js-0.1.1.tgz) and copy the `dist` folder to your public root, renaming it `solaris`.
 
 ```html
 <link rel="stylesheet" href="solaris/solaris.css">
