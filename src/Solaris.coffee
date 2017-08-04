@@ -22,31 +22,30 @@ class $Solaris
     @model = new Model
     @scale = new Scale(@model.bodies.pluto.elements.base.a * 2)
 
-    document.addEventListener 'DOMContentLoaded', =>
-      @el = if typeof element is 'string' then document.getElementById(element) else element
-      @el.classList.add 'solaris'
+    @el = if typeof element is 'string' then document.getElementById(element) else element
+    @el.classList.add 'solaris'
 
-      @loader = new Loader(@el, @root)
+    @loader = new Loader(@el, @root)
 
-      fastclick(options?.fastClickElement ? @el)
+    fastclick(options?.fastClickElement ? @el)
 
-      @scene = new Scene
-      @scene.add new AmbientLight(0x222222)
+    @scene = new Scene
+    @scene.add new AmbientLight(0x222222)
 
-      @createRenderer()
+    @createRenderer()
 
-      @background = new Background(@scale.sceneSize, @root)
-      @scene.add @background.mesh
+    @background = new Background(@scale.sceneSize, @root)
+    @scene.add @background.mesh
 
-      @createCamera()
-      @createControls()
+    @createCamera()
+    @createControls()
 
-      @bodies = Object.create(null)
-      @initBodies [@model.bodies.sun]
+    @bodies = Object.create(null)
+    @initBodies [@model.bodies.sun]
 
-      window.addEventListener 'resize', @onWindowResize, false
+    window.addEventListener 'resize', @onWindowResize, false
 
-      @animate()
+    @animate()
 
   # @public
   setTime: (time) ->
