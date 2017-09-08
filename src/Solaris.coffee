@@ -70,7 +70,9 @@ class $Solaris
     @camera.position.set 0, 0, @scale.convert(@model.bodies.mars.elements.base.a * 2.7)
 
   createControls: ->
-    @controls = new Controls(@camera, @renderer.domElement)
+    @controls = new Controls @camera, @renderer.domElement,
+      # minDistance: @scale.convert(@model.bodies.sun.radius)
+      maxDistance: @scale.sceneSize * 5
     @controls.enableZoom = true
     @controls.target.set(0, 0, 0)
 

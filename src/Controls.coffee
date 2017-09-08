@@ -11,7 +11,7 @@
 
 import * as THREE from 'three'
 
-Controls = (object, domElement) ->
+Controls = (object, domElement, options) ->
   ##################
   # public variables
   ##################
@@ -26,8 +26,8 @@ Controls = (object, domElement) ->
   @target = new THREE.Vector3
 
   # How far you can dolly in and out (PerspectiveCamera only)
-  @minDistance = 0
-  @maxDistance = Infinity
+  @minDistance = options?.minDistance ? 0
+  @maxDistance = options?.maxDistance ? Infinity
 
   # How far you can zoom in and out (OrthographicCamera only)
   @minZoom = 0
