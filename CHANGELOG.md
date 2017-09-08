@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 - Leaving handling of `DOMContentLoaded` to library consumer.
 
+### Fixed
+- Label flickering when zooming out.
+
 ## 0.1.1 - 2017-08-03
 ### Added
 - `fastClickElement` option: allows applying FastClick to document.body or another element.

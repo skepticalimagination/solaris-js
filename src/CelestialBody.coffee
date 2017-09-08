@@ -107,7 +107,7 @@ class $CelestialBody
     pos.x = (pos.x * hw) + hw
     pos.y = -(pos.y * hh) + hh
 
-    if 0 < pos.z < 1 and
+    if 0 < pos.z <= 1 and
     0 < pos.x < w and
     0 < pos.y < h
       pos
