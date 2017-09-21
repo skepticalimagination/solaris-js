@@ -42,4 +42,9 @@ class Label
       else
         @el.style.display = 'block'
 
-export default publicize Label, methods: ['onClick', 'setPosition']
+  # @public
+  select: ->
+    el.classList.remove 'selected' for el in document.querySelectorAll('.label')
+    @el.classList.add 'selected'
+
+export default publicize Label, methods: ['onClick', 'setPosition', 'select']

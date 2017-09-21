@@ -18,7 +18,6 @@ class $CelestialBody
     @container = if not @parent then @solaris.scene
     else $CelestialBody.privateInstances.get(@parent).group
 
-    # @public
     @group = new Group
     @container.add(@group)
 
@@ -33,6 +32,7 @@ class $CelestialBody
       @orbit = new Orbit(@model.getOrbitPath(), @styles.orbit, @solaris.scale)
       @container.add(@orbit.line)
 
+    # @public
     @label = new Label @model, @styles.orbit, @solaris.el
     @label.onClick => @solaris.center(this)
 
@@ -89,6 +89,7 @@ class $CelestialBody
 
     mesh
 
+  # @public
   getAbsolutePosition: ->
     pos = new Vector3
     pos.setFromMatrixPosition(@group.matrixWorld)
@@ -116,3 +117,5 @@ class $CelestialBody
 
 export default class CelestialBody extends publicize $CelestialBody,
   methods: ['update', 'getAbsolutePosition']
+  properties: ['label']
+  

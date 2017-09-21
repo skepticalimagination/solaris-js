@@ -41,11 +41,13 @@ class $Solaris
     @createControls()
 
     @bodies = Object.create(null)
-    @initBodies [@model.bodies.sun]
+    @initBodies {sun: @model.bodies.sun}
 
     window.addEventListener 'resize', @onWindowResize, false
 
     @animate()
+
+    @center('sun')
 
   # @public
   setTime: (time) ->
@@ -56,6 +58,7 @@ class $Solaris
   center: (@target) ->
     @target = @bodies[@target] if typeof @target is 'string'
     @controls.target.copy(@target.getAbsolutePosition())
+    @target.label.select()
 
   createRenderer: ->
     @renderer = new WebGLRenderer(antialias: yes, alpha: yes)
