@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ### Added
 - Highlighting selected / centered celestial body.
+- `Solaris#reset`: Resets the scene to the default perspective (centered on the sun).
 
 ### Changed
 - Leaving handling of `DOMContentLoaded` to library consumer.

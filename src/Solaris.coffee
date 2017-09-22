@@ -60,6 +60,11 @@ class $Solaris
     @controls.target.copy(@target.getAbsolutePosition())
     @target.label.select()
 
+  # @public
+  reset: ->
+    @controls.reset()
+    @center('sun')
+
   createRenderer: ->
     @renderer = new WebGLRenderer(antialias: yes, alpha: yes)
     @renderer.setSize window.innerWidth, window.innerHeight
@@ -103,4 +108,4 @@ class $Solaris
 
 export default class Solaris extends publicize $Solaris,
   properties: ['model']
-  methods: ['setTime', 'center']
+  methods: ['setTime', 'center', 'reset']

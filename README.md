@@ -108,6 +108,14 @@ Sets the center of camera and controls.
 solaris.center('mars')
 ```
 
+### `#reset`
+
+Resets the scene to the default perspective (centered on the sun).
+
+```javascript
+solaris.reset()
+```
+
 ### Styles
 
 You can customize the appearance of celestial bodies and orbits by using the `styles` param:
