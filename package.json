@@ -8,7 +8,8 @@
   "style": "dist/solaris.css",
   "files": [
     "dist",
-    "src"
+    "src",
+    "example"
   ],
   "scripts": {
     "rollup": "rollup -c",
