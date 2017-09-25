@@ -1,6 +1,6 @@
 {
   "name": "solaris-js",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A reusable component for interactive visualization of the Solar System",
   "main": "dist/solaris.js",
   "repository": "https://github.com/skepticalimagination/solaris-js.git",

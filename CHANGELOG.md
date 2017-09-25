@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## 0.1.2 - 2017-09-25
 ### Added
 - Highlighting selected / centered celestial body.
 - `Solaris#reset`: Resets the scene to the default perspective (centered on the sun).
@@ -33,5 +35,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Initial release.
 
-[Unreleased]: https://github.com/skepticalimagination/solaris-js/compare/v0.1.1...HEAD
+[Unreleased]: https://github.com/skepticalimagination/solaris-js/compare/v0.1.2...HEAD
+[0.1.2]: https://github.com/skepticalimagination/solaris-js/compare/v0.1.1...v0.1.2
 [0.1.1]: https://github.com/skepticalimagination/solaris-js/compare/v0.1.0...v0.1.1
